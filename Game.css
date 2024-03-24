@@ -8,62 +8,66 @@
     background: url("https://w0.peakpx.com/wallpaper/67/891/HD-wallpaper-classic-snake-adventures-snake-game.jpg"); 
     min-height: 100vh;
     background-size: 100vw 100vh;
+    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#scoreBox{
-    position: absolute;
+#scoreBoxes{
     top: 9px;
-    right: 200px;
-    font-size: 39px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#hiscoreBox{
     position: absolute;
-    top: 59px;
-    right: 200px;
-    font-size: 39px;
+    /* top: 15px; */
     font-weight: bold;
+    font-size: 39px;
     font-family: Arial, Helvetica, sans-serif;
+    right: 200px;
 }
 
-#board{
+#hiscoreBoxes {
+    position: absolute;
+    top: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 39px;
+    font-weight: bold;
+}
+
+#boards {
 
     background: linear-gradient(rgb(232, 233, 228), rgb(235, 235, 150));
     width: 90vmin;
+    grid-template-columns: repeat(18, 1fr);
     height: 92vmin;
     border: 2px solid black;
     display: grid;
     grid-template-rows: repeat(18, 1fr);
-    grid-template-columns: repeat(18, 1fr);
+    border: 2px solid black;
     position: absolute; 
     left: 5vw; 
     border-radius: 40px; 
-    
+    left: 5vw; 
 }
 
-.head{
+.heads{
     background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
     border: 2px solid rgb(34, 4, 34); 
     transform: scale(1.02);
     border-radius: 9px;
 }
 
-.snake{
+.snakess{
     background-color: purple;
+     border-radius: 12px;
     border: .25vmin solid white;
-    border-radius: 12px;
 }
 
-.food{
+.foods{
     background: linear-gradient(red, purple);
-    border: .25vmin solid black;
     border-radius: 8px;
+    border: .25vmin solid black;
 }
 
 
@@ -74,13 +78,13 @@
     .body {
         justify-content: flex-start;
     }
-    #scoreBox,
-    #hiscoreBox {
+    #scoreBoxes,
+    #hiscoreBoxes {
         position: static;
         font-size: 18px;
         text-align: left;
     }
-    #board {
+    #boards {
         width: 90vw;
         height: 90vw;
         left: 5vw;
@@ -94,13 +98,13 @@
     .body {
         justify-content: center;
     }
-    #scoreBox,
-    #hiscoreBox {
+    #scoreBoxes,
+    #hiscoreBoxes {
         position: absolute;
         font-size: 39px;
         text-align: left;
     }
-    #board {
+    #boards {
         width: 90vmin;
         height: 92vmin;
         left: 5vw;
